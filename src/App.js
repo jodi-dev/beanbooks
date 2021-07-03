@@ -1,4 +1,5 @@
 import './App.css';
+import MenuAppBar from './components/MenuAppBar.js';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,18 +11,8 @@ import {
 function App() {
   return (
     <Router>
+      <MenuAppBar />
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/social">Social</Link>
-            </li>
-          </ul>
-        </nav>
-
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
