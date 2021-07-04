@@ -12,6 +12,7 @@ import Tab from '@material-ui/core/Tab';
 import {
   Link
 } from "react-router-dom";
+import Box from '@material-ui/core/Box';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -20,15 +21,6 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
-  },
-  box: {
-    display: "flex",
-    flexDirection: "row",
-  },
-  title: {
-    flexGrow: 1,
-  },
-  appBar: {
   },
 }));
 
@@ -47,24 +39,30 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={useStyles.appBar}>
+      <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-                  beanBooks
-          </Typography>
-          <Tabs>
-              <Tab label="Home" component={Link} to="/" />
-              <Tab label="Social" component={Link} to="/social" />
-          </Tabs>
-          <IconButton
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleMenu}
-                color="inherit"
-              >
-              <AccountCircle />
-          </IconButton>
+          <Box flexGrow={1}>
+            <Box display="flex" flexWrap="nowrap" alignItems="center">
+              <Typography variant="h6" className={classes.title}>
+                      beanBooks
+              </Typography>
+              <Tabs className={classes.tabs}>
+                  <Tab label="Home" component={Link} to="/" />
+                  <Tab label="Social" component={Link} to="/social" />
+              </Tabs>
+            </Box>
+          </Box>
+          <Box>
+            <IconButton
+                  aria-label="account of current user"
+                  aria-controls="menu-appbar"
+                  aria-haspopup="true"
+                  onClick={handleMenu}
+                  color="inherit"
+                >
+                <AccountCircle />
+            </IconButton>
+          </Box>
           <Menu
                 id="menu-appbar"
                 anchorEl={anchorEl}
