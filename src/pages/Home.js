@@ -31,7 +31,6 @@ function Home() {
                         <body>Lorem ipsum</body>
                         <Grid container>
                             <Grid item md={6} xs={12}>
-                            <Paper className={classes.paper}>
                                 <Timeline>
                                     <TimelineItem>
                                         <TimelineSeparator>
@@ -54,10 +53,9 @@ function Home() {
                                         <TimelineContent>Sleep</TimelineContent>
                                     </TimelineItem>
                                 </Timeline>
-                            </Paper>
                             </Grid>
                             <Grid item md={6} xs={12}>
-                            <Paper className={classes.paper}>Image</Paper>
+                                <h2>image</h2>
                             </Grid>
                         </Grid>
                     </Grid>
