@@ -10,6 +10,7 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -103,7 +104,7 @@ function Home() {
                     </Grid>
                 </Grid>
                 <Grid item container direction="row" justify="center" alignItems="center">
-                    Test
+                    <Button variant="contained" color="primary">Get Started</Button>
                 </Grid>
             <Grid item xs />
         </Grid>
