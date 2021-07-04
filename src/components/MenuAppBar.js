@@ -22,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
+  title: {
+    marginLeft: 10,
+    marginRight: 20,
+  }
 }));
 
 export default function ButtonAppBar() {
@@ -35,11 +39,11 @@ export default function ButtonAppBar() {
   
   const handleClose = () => {
     setAnchorEl(null);
-  };  
+  };
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" style={{ background: '#000000' }}>
         <Toolbar>
           <Box flexGrow={1}>
             <Box display="flex" flexWrap="nowrap" alignItems="center">
@@ -47,7 +51,7 @@ export default function ButtonAppBar() {
                       beanBooks
               </Typography>
               <Tabs className={classes.tabs}>
-                  <Tab label="Home" component={Link} to="/" />
+                  <Tab label="App" component={Link} to="/mainapp" />
                   <Tab label="Social" component={Link} to="/social" />
               </Tabs>
             </Box>
