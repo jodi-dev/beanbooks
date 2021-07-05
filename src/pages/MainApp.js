@@ -8,6 +8,7 @@ import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import { useState } from 'react'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -68,6 +69,8 @@ function MainApp() {
     const handleReset = () => {
         setActiveStep(0);
     };
+
+    const [state, setState] = useState('customize');
     
     return (
         <div className={classes.root}>
@@ -76,43 +79,38 @@ function MainApp() {
                     <Grid item container direction="row" justify="center" alignItems="center">
                         <Grid item sm={8} xs={12}>
                             <h1>Main App</h1>
-                            <Stepper activeStep={activeStep} orientation="vertical">
-                                {steps.map((label, index) => (
-                                <Step key={label}>
-                                    <StepLabel>{label}</StepLabel>
-                                    <StepContent>
-                                    <Typography>{getStepContent(index)}</Typography>
-                                    <div className={classes.actionsContainer}>
-                                        <div>
-                                        <Button
-                                            disabled={activeStep === 0}
-                                            onClick={handleBack}
-                                            className={classes.button}
-                                        >
-                                            Back
-                                        </Button>
-                                        <Button
-                                            variant="contained"
-                                            color="primary"
-                                            onClick={handleNext}
-                                            className={classes.button}
-                                        >
-                                            {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-                                        </Button>
+                            {state === 'customize' && (
+                                <Stepper activeStep={activeStep} orientation="vertical">
+                                    {steps.map((label, index) => (
+                                    <Step key={label}>
+                                        <StepLabel>{label}</StepLabel>
+                                        <StepContent>
+                                        <Typography>{getStepContent(index)}</Typography>
+                                        <div className={classes.actionsContainer}>
+                                            <div>
+                                            <Button
+                                                disabled={activeStep === 0}
+                                                onClick={handleBack}
+                                                className={classes.button}
+                                            >
+                                                Back
+                                            </Button>
+                                            <Button
+                                                variant="contained"
+                                                color="primary"
+                                                onClick={activeStep === steps.length - 1 ?() => setState('prompt') : handleNext}
+                                                className={classes.button}
+                                            >
+                                                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                                            </Button>
+                                            </div>
                                         </div>
-                                    </div>
-                                    </StepContent>
-                                </Step>
-                                ))}
-                            </Stepper>
-                            {activeStep === steps.length && (
-                                <Paper square elevation={0} className={classes.resetContainer}>
-                                <Typography>All steps completed - you&apos;re finished</Typography>
-                                <Button onClick={handleReset} className={classes.button}>
-                                    Reset
-                                </Button>
-                                </Paper>
+                                        </StepContent>
+                                    </Step>
+                                    ))}
+                                </Stepper>
                             )}
+                            {state === 'prompt' && <h2>Test</h2>}
                         </Grid>
                     </Grid>
                 <Grid item xs />
