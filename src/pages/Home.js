@@ -11,6 +11,8 @@ import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
+import art from '../beanbooks.png';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -36,7 +38,7 @@ function Home() {
                     <Grid item sm={8} xs={12}>
                         <Box display="flex" justifyContent="center">
                             <Box>
-                                <h1>Hello</h1>
+                                <h1>For the love of writing</h1>
                             </Box>
                         </Box>
                         <Box display="flex" justifyContent="center">
@@ -59,9 +61,9 @@ function Home() {
                                             <TimelineConnector />
                                             </TimelineSeparator>
                                             <TimelineContent>
-                                                <h2>Test</h2>
+                                                <h2>New story prompts everyday</h2>
                                                 <body>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                Browse up to 4 select prompts for you based on your personal preferences.
                                                 </body>
                                             </TimelineContent>
                                         </TimelineItem>
@@ -74,9 +76,9 @@ function Home() {
                                             <TimelineConnector />
                                             </TimelineSeparator>
                                             <TimelineContent>
-                                                <h2>Test</h2>
+                                                <h2>Ready, set, write!</h2>
                                                 <body>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                Optionally set a timer and word count, and write anything based on the prompt.
                                                 </body>
                                             </TimelineContent>
                                         </TimelineItem>
@@ -88,9 +90,9 @@ function Home() {
                                             <TimelineDot />
                                             </TimelineSeparator>
                                             <TimelineContent>
-                                                <h2>Test</h2>
+                                                <h2>Download or share your work</h2>
                                                 <body>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                Save your work as a draft, download it or share on our social. Mingle on the forum with others!
                                                 </body>
                                             </TimelineContent>
                                         </TimelineItem>
@@ -98,7 +100,7 @@ function Home() {
                                 </Box>
                             </Grid>
                             <Grid item md={6} xs={12}>
-                                <h2>image</h2>
+                                <img className="art" src={art} alt="Art"/>
                             </Grid>
                         </Grid>
                     </Grid>

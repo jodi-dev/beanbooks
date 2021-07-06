@@ -32,24 +32,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-    return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+    return ['What are your favourite genres?', 'Set a timer and word count goal', 'Keep private or go public'];
   }
   
 function getStepContent(step) {
     switch (step) {
       case 0:
-        return `For each ad campaign that you create, you can control how much
-                you're willing to spend on clicks and conversions, which networks
-                and geographical locations you want your ads to show on, and more.`;
+        return `Select your preferred genres of story prompts. If none are chosen then all genres will be applied by default.`;
       case 1:
-        return 'An ad group contains one or more ads which target a shared set of keywords.';
+        return 'By default, a 1 hour and 30 minutes countdown and 750 word count goal will be applied. Relax! You may pause the timer, and there’s no penalty!';
       case 2:
-        return `Try out different ad text to see what brings in the most customers,
-                and learn how to enhance your ads using features like ad extensions.
-                If you run into any problems with your ads, find out how to tell if
-                they're running and how to resolve approval issues.`;
+        return `Set default stories to private or public mode. If set to public, your stories will be discoverable by other users. If skipped, your stories will be kept private by default.`;
       default:
-        return 'Unknown step';
+        return 'None';
     }
 }
 
@@ -78,7 +73,7 @@ function MainApp() {
                 <Grid item xs />
                     <Grid item container direction="row" justify="center" alignItems="center">
                         <Grid item sm={8} xs={12}>
-                            <h1>Main App</h1>
+                            <h1>Customize</h1>
                             {state === 'customize' && (
                                 <Stepper activeStep={activeStep} orientation="vertical">
                                     {steps.map((label, index) => (

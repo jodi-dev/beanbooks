@@ -13,6 +13,8 @@ import MainApp from './pages/MainApp.js';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 
 function App() {
   return (
@@ -34,6 +36,13 @@ function App() {
             </Router>
           </Grid>
       </Grid>
+      <Grid item container direction="row" justify="center" alignItems="center" className="footer">
+                <Box p={5}>
+                    <Typography>
+                        &copy; Elysaia
+                    </Typography>
+                </Box>
+            </Grid>
       </Paper>
     </ThemeProvider>
   );

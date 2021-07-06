@@ -6,8 +6,6 @@ function Social() {
             <Grid item xs />
                 <Grid item container direction="row" justify="center" alignItems="center">
                     <Grid item sm={8} xs={12}>
-                        <h1>Hello</h1>
-                        <body>Lorem ipsum</body>
                         <Grid container>
                             <Grid item md={8} xs={12}>
                                 <h2>New Stories</h2>

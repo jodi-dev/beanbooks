@@ -47,7 +47,7 @@ export default function ButtonAppBar() {
         <Toolbar>
           <Box flexGrow={1}>
             <Box display="flex" flexWrap="nowrap" alignItems="center">
-              <Typography variant="h6" className={classes.title}>
+              <Typography style={{color:"#FFFFFF"}} variant="h6" className={classes.title} component={Link} to="/">
                       beanBooks
               </Typography>
               <Tabs className={classes.tabs}>
