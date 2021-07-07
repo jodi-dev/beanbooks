@@ -13,12 +13,14 @@ export default function RadioButtonsGroup() {
   };
 
   return (
-    <FormControl component="fieldset">
-      <FormLabel component="legend"></FormLabel>
-      <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
-        <FormControlLabel value="private" control={<Radio />} label="Private" />
-        <FormControlLabel value="public" control={<Radio />} label="Public" />
-      </RadioGroup>
-    </FormControl>
+    <div>
+      <FormControl component="fieldset">
+        <FormLabel component="legend"></FormLabel>
+        <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
+          <FormControlLabel value="private" control={<Radio />} label="Private" />
+          <FormControlLabel value="public" control={<Radio />} label="Public" />
+        </RadioGroup>
+      </FormControl>
+    </div>
   );
 }
