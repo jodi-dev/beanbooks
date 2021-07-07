@@ -9,6 +9,8 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { useState } from 'react'
+import OutlinedButtons from '../components/OutlinedButtons';
+import RadioButtonsGroup from '../components/RadioGroup';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -38,11 +40,21 @@ function getSteps() {
 function getStepContent(step) {
     switch (step) {
       case 0:
-        return `Select your preferred genres of story prompts. If none are chosen then all genres will be applied by default.`;
+        return (
+            <div>
+                Select your preferred genres of story prompts. If none are chosen then all genres will be applied by default.
+                <OutlinedButtons />
+            </div>
+            );
       case 1:
         return 'By default, a 1 hour and 30 minutes countdown and 750 word count goal will be applied. Relax! You may pause the timer, and there’s no penalty!';
       case 2:
-        return `Set default stories to private or public mode. If set to public, your stories will be discoverable by other users. If skipped, your stories will be kept private by default.`;
+        return (
+            <div>
+                Set default stories to private or public mode. If set to public, your stories will be discoverable by other users. If skipped, your stories will be kept private by default.
+                <RadioButtonsGroup />
+            </div>
+        );
       default:
         return 'None';
     }
