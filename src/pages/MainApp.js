@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import { useState } from 'react'
 import OutlinedButtons from '../components/OutlinedButtons';
 import RadioButtonsGroup from '../components/RadioGroup';
+import LayoutTextFields from '../components/Inputs';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -47,7 +48,12 @@ function getStepContent(step) {
             </div>
             );
       case 1:
-        return 'By default, a 1 hour and 30 minutes countdown and 750 word count goal will be applied. Relax! You may pause the timer, and there’s no penalty!';
+        return (
+            <div>
+                By default, a 1 hour and 30 minutes countdown and 750 word count goal will be applied. Relax! You may pause the timer, and there’s no penalty!
+                <LayoutTextFields />
+            </div>
+        );
       case 2:
         return (
             <div>

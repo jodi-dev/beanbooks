@@ -15,18 +15,32 @@ export default function OutlinedButtons() {
 
   return (
     <div className={classes.root}>
-      <Button variant="outlined">Default</Button>
       <Button variant="outlined" color="primary">
         Primary
       </Button>
-      <Button variant="outlined" color="secondary">
-        Secondary
+      <Button variant="outlined" color="primary">
+        Primary
       </Button>
-      <Button variant="outlined" disabled>
-        Disabled
+      <Button variant="outlined" color="primary">
+        Primary
       </Button>
-      <Button variant="outlined" color="primary" href="#outlined-buttons">
-        Link
+      <Button variant="outlined" color="primary">
+        Primary
+      </Button>
+      <Button variant="outlined" color="primary">
+        Primary
+      </Button>
+      <Button variant="outlined" color="primary">
+        Primary
+      </Button>
+      <Button variant="outlined" color="primary">
+        Primary
+      </Button>
+      <Button variant="outlined" color="primary">
+        Primary
+      </Button>
+      <Button variant="outlined" color="primary">
+        Primary
       </Button>
     </div>
   );
