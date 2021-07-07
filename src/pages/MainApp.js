@@ -12,6 +12,7 @@ import { useState } from 'react'
 import OutlinedButtons from '../components/OutlinedButtons';
 import RadioButtonsGroup from '../components/RadioGroup';
 import LayoutTextFields from '../components/Inputs';
+import WriteBlock from '../components/WriteBlock';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -123,7 +124,9 @@ function MainApp() {
                                     ))}
                                 </Stepper>
                             )}
-                            {state === 'prompt' && <h2>Test</h2>}
+                            {state === 'prompt' &&
+                                <WriteBlock />
+                            }
                         </Grid>
                     </Grid>
                 <Grid item xs />
