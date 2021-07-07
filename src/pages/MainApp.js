@@ -13,6 +13,8 @@ import OutlinedButtons from '../components/OutlinedButtons';
 import RadioButtonsGroup from '../components/RadioGroup';
 import LayoutTextFields from '../components/Inputs';
 import WriteBlock from '../components/WriteBlock';
+import Box from '@material-ui/core/Box';
+import Timer from '../components/Timer';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -92,8 +94,9 @@ function MainApp() {
                 <Grid item xs />
                     <Grid item container direction="row" justify="center" alignItems="center">
                         <Grid item sm={8} xs={12}>
-                            <h1>Customize</h1>
                             {state === 'customize' && (
+                                <div>
+                                <h1>Customize</h1>
                                 <Stepper activeStep={activeStep} orientation="vertical">
                                     {steps.map((label, index) => (
                                     <Step key={label}>
@@ -123,9 +126,22 @@ function MainApp() {
                                     </Step>
                                     ))}
                                 </Stepper>
+                                </div>
                             )}
                             {state === 'prompt' &&
-                                <WriteBlock />
+                                <div>
+                                    <Grid>
+                                        <Box flexDirection="row">
+                                            <Box>
+                                                <h1>Time to write</h1>
+                                            </Box>
+                                            <Box>
+                                                <Timer />
+                                            </Box>
+                                        </Box>
+                                    </Grid>
+                                    <WriteBlock />
+                                </div>
                             }
                         </Grid>
                     </Grid>
