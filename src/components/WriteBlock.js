@@ -4,7 +4,6 @@ import Paper from '@material-ui/core/Paper';
 import { Grid } from '@material-ui/core';
 import PromptFab from './PromptFab';
 import Box from '@material-ui/core/Box';
-import TextFab from './TextFab';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -26,8 +25,13 @@ function WriteBlock() {
                     <Paper className={classes.paper}>
                         <Grid item container>
                             <Grid item xs={10}>
+                                <Box item>
+                                    <body>
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                                    </body>
+                                </Box>
                             </Grid>
-                            <Grid item xs={2}>
+                            <Grid xs={2}>
                                 <Box justifyContent="flex-end">
                                     <Box>
                                         <PromptFab />
@@ -47,7 +51,7 @@ function WriteBlock() {
                             <Grid item xs={2}>
                                 <Box justifyContent="flex-end">
                                     <Box>
-                                        <TextFab />
+                                        <h2>Test</h2>
                                     </Box>
                                 </Box>
                             </Grid>

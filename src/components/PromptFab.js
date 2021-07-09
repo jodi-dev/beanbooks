@@ -7,6 +7,9 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import SpeedDial from '@material-ui/lab/SpeedDial';
 import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
 import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
+import RefreshIcon from '@material-ui/icons/Refresh';
+import ClearIcon from '@material-ui/icons/Clear';
+import BookmarkIcon from '@material-ui/icons/Bookmark';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   exampleWrapper: {
     position: 'relative',
-    marginTop: theme.spacing(3),
+    marginTop: theme.spacing(5),
     height: 100,
   },
   radioGroup: {
@@ -24,12 +27,12 @@ const useStyles = makeStyles((theme) => ({
   speedDial: {
     position: 'absolute',
     '&.MuiSpeedDial-directionUp, &.MuiSpeedDial-directionLeft': {
-      bottom: theme.spacing(2),
-      right: theme.spacing(2),
+      bottom: theme.spacing(0),
+      right: theme.spacing(1),
     },
     '&.MuiSpeedDial-directionDown, &.MuiSpeedDial-directionRight': {
-      top: theme.spacing(2),
-      left: theme.spacing(2),
+      top: theme.spacing(1),
+      left: theme.spacing(1),
     },
     '&.MuiSpeedDial-fab': {
       color: 'default',
@@ -42,11 +45,14 @@ const useStyles = makeStyles((theme) => ({
 
 const actions = [
   { icon: <FavoriteIcon />, name: 'Like' },
+  { icon: <RefreshIcon />, name: 'New prompt' },
+  { icon: <BookmarkIcon />, name: 'Save draft' },
+  { icon: <ClearIcon />, name: 'Clear all' },
 ];
 
 export default function PromptFab() {
   const classes = useStyles();
-  const [direction, setDirection] = React.useState('right');
+  const [direction, setDirection] = React.useState('left');
   const [open, setOpen] = React.useState(false);
   const [hidden, setHidden] = React.useState(false);
 
