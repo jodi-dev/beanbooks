@@ -4,16 +4,32 @@ import Paper from '@material-ui/core/Paper';
 import { Grid } from '@material-ui/core';
 import PromptFab from './PromptFab';
 import Box from '@material-ui/core/Box';
+import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      flexGrow: 1,
+        flexGrow: 1,
     },
     paper: {
-      padding: theme.spacing(2),
-      textAlign: 'center',
-      color: theme.palette.text.secondary,
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
     },
+    promptPaper: {
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        color: '#FFFFFF',
+        backgroundColor: '#000000',
+    },
+    textPaper: {
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        color: '#FFFFFF'
+    },
+    textArea: {
+        minHeight: 200,
+        minWidth: '100%',
+    }
 }));
 
 function WriteBlock() {
@@ -22,7 +38,7 @@ function WriteBlock() {
         <div className={classes.root}>
             <Grid item container spacing={2}>
                 <Grid item xs={12}>
-                    <Paper className={classes.paper}>
+                    <Paper className={classes.promptPaper}>
                         <Grid item container>
                             <Grid item xs={10}>
                                 <Box item>
@@ -44,18 +60,15 @@ function WriteBlock() {
             </Grid>
             <Grid item container spacing={2}>
                 <Grid item xs={12}>
-                    <Paper className={classes.paper}>
+                    <Paper className={classes.textPaper}>
                     <Grid item container>
-                            <Grid item xs={10}>
-                            </Grid>
-                            <Grid item xs={2}>
-                                <Box justifyContent="flex-end">
-                                    <Box>
-                                        <h2>Test</h2>
-                                    </Box>
-                                </Box>
-                            </Grid>
-                        </Grid>
+                        <TextareaAutosize
+                            maxRows={10}
+                            aria-label="maximum height"
+                            defaultValue="Write here!"
+                            className={classes.textArea}
+                        />  
+                    </Grid>
                     </Paper>
                 </Grid>
             </Grid>
