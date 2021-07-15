@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import { ButtonGroup } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,34 +14,47 @@ const useStyles = makeStyles((theme) => ({
 export default function OutlinedButtons() {
   const classes = useStyles();
 
+  const [selectedBtn, setSelectedBtn] = React.useState(-1);
+
+  function btnSelect() {
+    if (selectedBtn == -1) {
+      setSelectedBtn(1);
+    } else {
+      setSelectedBtn(-1);
+    }
+  }
+
   return (
     <div className={classes.root}>
-      <Button variant="outlined" color="primary">
-        Primary
+      <Button variant={selectedBtn === 1 ? "contained" : "outlined"} color="primary" onClick={()=>btnSelect()}>
+        Horror
       </Button>
       <Button variant="outlined" color="primary">
-        Primary
+        Humour
       </Button>
       <Button variant="outlined" color="primary">
-        Primary
+        Romance
       </Button>
       <Button variant="outlined" color="primary">
-        Primary
+        Fantasy
       </Button>
       <Button variant="outlined" color="primary">
-        Primary
+        Crime
       </Button>
       <Button variant="outlined" color="primary">
-        Primary
+        Sci-fi
       </Button>
       <Button variant="outlined" color="primary">
-        Primary
+        Thriller
       </Button>
       <Button variant="outlined" color="primary">
-        Primary
+        Adventure
       </Button>
       <Button variant="outlined" color="primary">
-        Primary
+        Action
+      </Button>
+      <Button variant="outlined" color="primary">
+        YA fiction
       </Button>
     </div>
   );

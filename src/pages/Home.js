@@ -13,6 +13,7 @@ import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import art from '../beanbooks.png';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -78,7 +79,7 @@ function Home() {
                                             <TimelineContent>
                                                 <h2>Ready, set, write!</h2>
                                                 <body>
-                                                Optionally set a timer and word count, and write anything based on the prompt.
+                                                    Optionally set a timer and word count, and write anything based on the prompt.
                                                 </body>
                                             </TimelineContent>
                                         </TimelineItem>
@@ -92,7 +93,7 @@ function Home() {
                                             <TimelineContent>
                                                 <h2>Download or share your work</h2>
                                                 <body>
-                                                Save your work as a draft, download it or share on our social. Mingle on the forum with others!
+                                                    Save your work as a draft, download it or share on our social. Mingle on the forum with others!
                                                 </body>
                                             </TimelineContent>
                                         </TimelineItem>
@@ -106,7 +107,7 @@ function Home() {
                     </Grid>
                 </Grid>
                 <Grid item container direction="row" justify="center" alignItems="center">
-                    <Button variant="contained" color="primary">Get Started</Button>
+                    <Button component={Link} to="/mainapp" variant="contained" color="primary">Get Started</Button>
                 </Grid>
             <Grid item xs />
         </Grid>

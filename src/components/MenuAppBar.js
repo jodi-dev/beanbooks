@@ -13,7 +13,10 @@ import {
   Link
 } from "react-router-dom";
 import Box from '@material-ui/core/Box';
-
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormHelperText from '@material-ui/core/FormHelperText';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,6 +28,16 @@ const useStyles = makeStyles((theme) => ({
   title: {
     marginLeft: 10,
     marginRight: 20,
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+  select: {
+    backgroundColor: "#ffffff",
   }
 }));
 
@@ -41,6 +54,11 @@ export default function ButtonAppBar() {
     setAnchorEl(null);
   };
 
+  const [language, setLanguage] = React.useState("English");
+
+  const handleChange = (event) => {
+    setLanguage(event.target.value);
+  };
   return (
     <div className={classes.root}>
       <AppBar position="static" style={{ background: '#000000' }}>
@@ -85,6 +103,18 @@ export default function ButtonAppBar() {
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
           </Menu>
+          <FormControl variant="outlined" className={classes.formControl}>
+            <Select
+              id="demo-simple-select-outlined"
+              value={language}
+              onChange={handleChange}
+              label="Language"
+              className={classes.select}
+            >
+              <MenuItem value={"English"}>English</MenuItem>
+              <MenuItem value={"French"}>French</MenuItem>
+            </Select>
+              </FormControl>
         </Toolbar>
       </AppBar>
     </div>

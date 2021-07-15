@@ -37,12 +37,12 @@ function App() {
           </Grid>
       </Grid>
       <Grid item container direction="row" justify="center" alignItems="center" className="footer">
-                <Box p={5}>
-                    <Typography>
-                        &copy; Elysaia
-                    </Typography>
-                </Box>
-            </Grid>
+        <Box p={5}>
+            <Typography>
+                &copy; Elysaia
+            </Typography>
+        </Box>
+      </Grid>
       </Paper>
     </ThemeProvider>
   );
