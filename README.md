@@ -2,11 +2,9 @@
 
 ## Components
 
-- [React circle timer](https://snyk.io/advisor/npm-package/react-countdown-circle-timer))
-
 - [Chip input](https://www.npmjs.com/package/material-ui-chip-input)
 
-
+- [I18N thing](https://medium.com/@jishnu61/6-easy-steps-to-localize-your-react-application-internationalization-with-i18next-8de9cc3a66a1)
 
 ## Design Report
 
