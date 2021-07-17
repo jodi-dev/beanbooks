@@ -45,14 +45,13 @@ function Home() {
                     <Grid item sm={8} xs={12}>
                         <Box display="flex" justifyContent="center">
                             <Box>
-                                {/* <h2>For the love of writing</h2> */}
-                                <MyComponent />
+                                <h1>書くことを愛するために</h1>
                             </Box>
                         </Box>
                         <Box display="flex" justifyContent="center">
                             <Box>
                                 <body>
-                                    Create, find and share bean-sized stories written by users like yourself! This is a fun application that encourages the writer in everybody and helps you get over your writers block, get in the groove and get your daily writing practice in.
+                                    あなたのようなユーザーが書いた豆サイズのストーリーを作成、検索、共有しましょう！これは、すべての人の作家を励まし、作家のブロックを乗り越え、溝に入り、毎日の執筆練習を始めるのに役立つ楽しいアプリケーションです。
                                 </body>
                             </Box>
                         </Box>
@@ -69,9 +68,9 @@ function Home() {
                                             <TimelineConnector />
                                             </TimelineSeparator>
                                             <TimelineContent>
-                                                <h2>New story prompts everyday</h2>
+                                                <h2>新しい物語は毎日促します</h2>
                                                 <body>
-                                                Browse up to 4 select prompts for you based on your personal preferences.
+                                                    個人的な好みに基づいて、最大4つの選択プロンプトを参照します。
                                                 </body>
                                             </TimelineContent>
                                         </TimelineItem>
@@ -84,9 +83,9 @@ function Home() {
                                             <TimelineConnector />
                                             </TimelineSeparator>
                                             <TimelineContent>
-                                                <h2>Ready, set, write!</h2>
+                                                <h2>準備ができて、設定して、書いてください！</h2>
                                                 <body>
-                                                    Optionally set a timer and word count, and write anything based on the prompt.
+                                                    必要に応じて、タイマーと単語数を設定し、プロンプトに基づいて何でも書き込みます。
                                                 </body>
                                             </TimelineContent>
                                         </TimelineItem>
@@ -98,9 +97,9 @@ function Home() {
                                             <TimelineDot />
                                             </TimelineSeparator>
                                             <TimelineContent>
-                                                <h2>Download or share your work</h2>
+                                                <h2>必要に応じて、タイマーと単語数を設定し、プロンプトに基づいて何でも書き込みます。</h2>
                                                 <body>
-                                                    Save your work as a draft, download it or share on our social. Mingle on the forum with others!
+                                                    作品を下書きとして保存するか、ダウンロードするか、ソーシャルで共有してください。他の人とフォーラムで交流しましょう！
                                                 </body>
                                             </TimelineContent>
                                         </TimelineItem>
@@ -114,7 +113,7 @@ function Home() {
                     </Grid>
                 </Grid>
                 <Grid item container direction="row" justify="center" alignItems="center">
-                    <Button component={Link} to="/mainapp" variant="contained" color="primary">Get Started</Button>
+                    <Button component={Link} to="/mainapp" variant="contained" color="primary">始めましょう</Button>
                 </Grid>
             <Grid item xs />
         </Grid>
