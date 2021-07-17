@@ -4,10 +4,14 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n";
 
 ReactDOM.render((
   <BrowserRouter>
-    <App /> {/* The various pages will be displayed by the `Main` component. */}
+    <I18nextProvider i18n={i18n}>
+      <App /> {/* The various pages will be displayed by the `Main` component. */}
+    </I18nextProvider>
   </BrowserRouter>
   ), document.getElementById('root')
 );

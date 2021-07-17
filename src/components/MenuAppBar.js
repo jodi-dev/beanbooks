@@ -15,8 +15,6 @@ import {
 import Box from '@material-ui/core/Box';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormHelperText from '@material-ui/core/FormHelperText';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -54,7 +52,7 @@ export default function ButtonAppBar() {
     setAnchorEl(null);
   };
 
-  const [language, setLanguage] = React.useState("English");
+  const [language, setLanguage] = React.useState("en");
 
   const handleChange = (event) => {
     setLanguage(event.target.value);
@@ -111,8 +109,8 @@ export default function ButtonAppBar() {
               label="Language"
               className={classes.select}
             >
-              <MenuItem value={"English"}>English</MenuItem>
-              <MenuItem value={"French"}>French</MenuItem>
+              <MenuItem component={Link} to="/" value="en">English</MenuItem>
+              <MenuItem component={Link} to="/home-jp" value="jp">Japanese</MenuItem>
             </Select>
               </FormControl>
         </Toolbar>

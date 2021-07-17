@@ -10,6 +10,7 @@ import {
 import Home from './pages/Home.js';
 import Social from './pages/Social.js';
 import MainApp from './pages/MainApp.js';
+import HomeJp from './pages/HomeJp';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
@@ -31,6 +32,7 @@ function App() {
                   <Route path="/" exact component={Home} />
                   <Route path="/mainapp" exact component={MainApp} />
                   <Route path="/social" exact component={Social} />
+                  <Route path="/home-jp" exact component={HomeJp} />
                 </Switch>
               </div>
             </Router>
