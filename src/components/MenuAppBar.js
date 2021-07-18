@@ -40,6 +40,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ButtonAppBar() {
+  const [value, setValue] = React.useState(2);
+  const handleValue = (event, newValue) => {
+    setValue(newValue);
+  };
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -66,7 +70,11 @@ export default function ButtonAppBar() {
               <Typography style={{color:"#FFFFFF"}} variant="h6" className={classes.title} component={Link} to="/">
                       beanBooks
               </Typography>
-              <Tabs className={classes.tabs}>
+              <Tabs className={classes.tabs}
+                value={value}
+                onChange={handleValue}
+                indicatorColor="primary"
+              >
                   <Tab label="App" component={Link} to="/mainapp" />
                   <Tab label="Social" component={Link} to="/social" />
               </Tabs>
