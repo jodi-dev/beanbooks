@@ -1,5 +1,7 @@
 # beanBooks
 
+This is an incomplete writing prompt generator web app for a hypothetical fanfiction writing community. It's built in React with MUI components.
+
 ## Components
 
 - [Chip input](https://www.npmjs.com/package/material-ui-chip-input)
@@ -33,3 +35,9 @@ For each 10 heuristics:
 1. Error prevention: Customization input will be constrained to allowed options. For example, genre categories will be predefined, default timer and word goal will be given (will be constrained to within a reasonable range too).
 1. Error recovery: For all pages not on the planned routes, there will be a 404 page.
 1. Help: There will be some local help elements in the form of text descriptions.
+
+# To Launch
+
+try beanbooks.herokuapp.com
+
+(may take a few minutes to build/fail to build upon first launch)
